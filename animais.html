@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Animais | Pacotinho de Amor</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+
+<body>
+
+    <header class="cabecalho">
+
+        <a href="index.html" class="voltar">
+            ←
+        </a>
+
+        <div class="logo">
+            🐾
+        </div>
+
+        <div>
+            <h1>Pacotinho de Amor</h1>
+            <p>Animais da Feira • 03/09</p>
+        </div>
+
+    </header>
+
+
+    <main class="pagina-animais">
+
+        <section class="titulo-pagina">
+
+            <span class="etiqueta">
+                🐾 Conheça os participantes
+            </span>
+
+            <h2>
+                Histórias que<br>
+                <span>merecem ser contadas.</span>
+            </h2>
+
+            <p>
+                Pesquise pelo nome do animal ou escolha uma
+                das categorias abaixo.
+            </p>
+
+        </section>
+
+
+        <section class="busca">
+
+            <input
+                type="text"
+                id="campoBusca"
+                placeholder="Digite o nome do animal..."
+                autocomplete="off"
+            >
+
+            <button id="botaoLimpar">
+                Limpar
+            </button>
+
+        </section>
+
+
+        <section class="filtros">
+
+            <button class="filtro ativo" data-filtro="todos">
+                Todos
+            </button>
+
+            <button class="filtro" data-filtro="Guia">
+                Guia
+            </button>
+
+            <button class="filtro" data-filtro="Cercado">
+                Cercados
+            </button>
+
+            <button class="filtro" data-filtro="Gaiola">
+                Gaiola
+            </button>
+
+        </section>
+
+
+        <p id="quantidadeResultados" class="quantidade"></p>
+
+
+        <section id="listaAnimais" class="lista-animais">
+
+        </section>
+
+
+        <div id="semResultados" class="sem-resultados">
+
+            <div>
+                🐾
+            </div>
+
+            <h3>Animal não encontrado</h3>
+
+            <p>
+                Confira a escrita do nome e tente novamente.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <strong>Pacotinho de Amor</strong>
+
+        <p>Feira Petland • 03/09</p>
+
+    </footer>
+
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
