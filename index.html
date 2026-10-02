@@ -1,373 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pacotinho de Amor • Feira Petland • 03/09</title>
+    <title>Feira de Adoção - 03/09</title>
 
-<style>
-
-:root{
-    --roxo:#613776;
-    --roxo2:#8f66a3;
-    --lilas:#c09bc8;
-    --lilas-claro:#f7eff8;
-    --amarelo:#ffe55c;
-    --texto:#34243d;
-    --borda:#ead8ee;
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    color:var(--texto);
-    background:#fff;
-}
-
-/* CABEÇALHO */
-
-header{
-    background:var(--roxo);
-    color:#fff;
-    padding:18px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    font-weight:800;
-    font-size:1.35rem;
-}
-
-.date{
-    font-size:.9rem;
-    opacity:.9;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    margin-left:20px;
-}
-
-/* CONTEÚDO */
-
-main{
-    max-width:1120px;
-    margin:auto;
-    padding:42px 20px 70px;
-}
-
-/* INÍCIO */
-
-.hero{
-    background:linear-gradient(
-        135deg,
-        var(--lilas-claro),
-        #fff
-    );
-
-    border-radius:28px;
-    padding:50px 40px;
-    margin-bottom:32px;
-}
-
-.hero h1{
-    font-size:clamp(2.4rem,6vw,4.8rem);
-    line-height:.95;
-    margin:0 0 18px;
-    color:var(--roxo);
-}
-
-.hero p{
-    font-size:1.15rem;
-    max-width:760px;
-    line-height:1.6;
-}
-
-/* BOTÕES */
-
-.btn{
-    display:inline-block;
-    background:var(--roxo);
-    color:#fff;
-    padding:13px 20px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:800;
-    border:0;
-    cursor:pointer;
-}
-
-/* TÍTULOS */
-
-.section-title{
-    color:var(--roxo);
-    font-size:2rem;
-    margin-top:35px;
-}
-
-/* CARDS */
-
-.grid{
-    display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(210px,1fr));
-
-    gap:16px;
-}
-
-.card{
-    border:1px solid var(--borda);
-    border-radius:18px;
-    padding:22px;
-    background:white;
-
-    box-shadow:
-        0 7px 24px #61377612;
-
-    cursor:pointer;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-3px);
-    border-color:var(--lilas);
-}
-
-.card h3{
-    margin:0 0 8px;
-    color:var(--roxo);
-}
-
-.card p{
-    margin:5px 0;
-    color:#644f6b;
-}
-
-/* PESQUISA */
-
-.search{
-    display:flex;
-    gap:10px;
-    margin:25px 0;
-    flex-wrap:wrap;
-}
-
-.search input{
-    flex:1;
-    min-width:220px;
-
-    padding:15px 17px;
-
-    border:2px solid var(--borda);
-    border-radius:13px;
-
-    font-size:1rem;
-}
-
-/* FILTROS */
-
-.tabs{
-    display:flex;
-    gap:9px;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-}
-
-.tab{
-    padding:10px 16px;
-
-    border:1px solid var(--borda);
-    background:white;
-
-    border-radius:999px;
-
-    color:var(--roxo);
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-.tab.active{
-    background:var(--roxo);
-    color:white;
-}
-
-/* FICHA */
-
-.detail{
-    background:white;
-
-    border:1px solid var(--borda);
-    border-radius:25px;
-
-    padding:28px;
-
-    box-shadow:
-        0 10px 30px #61377612;
-}
-
-/* FOTO */
-
-.photo{
-    height:360px;
-
-    border:3px dashed var(--lilas);
-
-    background:var(--lilas-claro);
-
-    border-radius:20px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--roxo);
-
-    font-weight:800;
-
-    text-align:center;
-
-    margin:24px 0;
-
-    overflow:hidden;
-}
-
-.photo img{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-}
-
-.photo-placeholder{
-    padding:25px;
-}
-
-/* INFORMAÇÕES */
-
-.info{
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(190px,1fr));
-
-    gap:12px;
-
-    margin:20px 0;
-}
-
-.info div{
-    background:var(--lilas-claro);
-
-    padding:15px;
-
-    border-radius:14px;
-}
-
-/* HISTÓRIA */
-
-.story{
-    line-height:1.75;
-    font-size:1.05rem;
-    white-space:pre-line;
-}
-
-/* OUTROS */
-
-.hidden{
-    display:none;
-}
-
-footer{
-    background:var(--roxo);
-    color:white;
-
-    text-align:center;
-
-    padding:28px;
-}
-
-.empty{
-    text-align:center;
-
-    padding:30px;
-
-    color:#745b7c;
-}
-
-.small{
-    font-size:.9rem;
-    color:#735d7a;
-}
-
-/* CELULAR */
-
-@media(max-width:650px){
-
-    header{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    nav a{
-        margin:
-            0
-            16px
-            0
-            0;
-    }
-
-    .hero{
-        padding:35px 24px;
-    }
-
-    .photo{
-        height:280px;
-    }
-
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<header>
+<header class="topo">
 
-    <div>
-
-        <div class="logo">
-            🐾 Pacotinho de Amor
-        </div>
-
-        <div class="date">
-            Consulta da Feira Petland • 03/09
-        </div>
-
+    <div class="logo">
+        🐾 Feira de Adoção
     </div>
 
+    <nav class="menu">
 
-    <nav>
-
-        <a href="#inicio">
+        <a href="index.html">
             Início
         </a>
 
-        <a href="#animais">
+        <a href="animais.html">
             Animais
+        </a>
+
+        <a href="animais.html?tipo=cao">
+            🐶 Cães
+        </a>
+
+        <a href="animais.html?tipo=gato">
+            🐱 Gatos
         </a>
 
     </nav>
@@ -377,621 +43,131 @@ footer{
 
 <main>
 
-<!-- PÁGINA INICIAL -->
+    <section class="hero">
 
-<section
-    id="inicio"
-    class="hero"
->
+        <div class="hero-conteudo">
 
-    <h1>
-        Cada história importa.
-    </h1>
-
-    <p>
-        Consulte os animais da feira,
-        encontre o nome do pacotinho
-        e veja sua história,
-        o voluntário responsável,
-        o local e as entrevistadoras.
-    </p>
-
-    <a
-        class="btn"
-        href="#animais"
-    >
-        Ver animais
-    </a>
-
-</section>
-
-
-<!-- LISTA DE ANIMAIS -->
-
-<section id="animais">
-
-    <h2 class="section-title">
-        Animais da feira
-    </h2>
-
-
-    <div class="search">
-
-        <input
-            id="busca"
-            type="search"
-            placeholder="Pesquisar pelo nome do animal..."
-            aria-label="Pesquisar animal"
-        >
-
-        <button
-            class="btn"
-            id="limpar"
-        >
-            Limpar
-        </button>
-
-    </div>
-
-
-    <div class="tabs">
-
-        <button
-            class="tab active"
-            data-filtro="todos"
-        >
-            Todos
-        </button>
-
-        <button
-            class="tab"
-            data-filtro="Guia"
-        >
-            Guia
-        </button>
-
-        <button
-            class="tab"
-            data-filtro="Cercado"
-        >
-            Cercados
-        </button>
-
-        <button
-            class="tab"
-            data-filtro="Gaiola"
-        >
-            Gaiola
-        </button>
-
-    </div>
-
-
-    <div
-        id="lista"
-        class="grid"
-    ></div>
-
-</section>
-
-
-<!-- FICHA DO ANIMAL -->
-
-<section
-    id="ficha"
-    class="hidden"
-    style="margin-top:35px"
->
-
-    <div class="detail">
-
-        <button
-            class="tab"
-            id="voltar"
-        >
-            ← Voltar para os animais
-        </button>
-
-
-        <h2
-            id="nomeFicha"
-            class="section-title"
-        ></h2>
-
-
-        <!-- ÁREA DA FOTO -->
-
-        <div class="photo">
-
-            <img
-                id="fotoAnimal"
-                src=""
-                alt=""
-                style="display:none"
-            >
-
-            <div
-                id="photoPlaceholder"
-                class="photo-placeholder"
-            >
-
-                📷
-
-                <br><br>
-
-                ESPAÇO RESERVADO PARA
-                A FOTO DO ANIMAL
-
-                <br>
-
-                <span class="small">
-                    Coloque a foto na pasta
-                    assets/fotos.
-                </span>
-
+            <div class="patinha">
+                🐾
             </div>
+
+            <h1>
+                Cada história importa
+            </h1>
+
+            <p>
+                Conheça os animais participantes da
+                Feira de Adoção e descubra a história
+                de cada um deles.
+            </p>
+
+            <a
+                href="animais.html"
+                class="botao-principal"
+            >
+                Conhecer os animais
+            </a>
 
         </div>
 
+    </section>
 
-        <!-- INFORMAÇÕES -->
 
-        <div class="info">
+    <section class="sobre">
 
-            <div>
+        <h2>
+            Feira de Adoção
+        </h2>
 
-                <strong>
-                    Responsável(is)
-                </strong>
+        <p>
+            Neste espaço você pode conhecer individualmente
+            os animais da feira, pesquisar pelo nome e
+            consultar suas histórias.
+        </p>
 
-                <br>
+        <p>
+            Os animais pertencentes a uma mesma ninhada
+            aparecem separadamente, mantendo a história
+            correspondente à sua ninhada.
+        </p>
 
-                <span id="volFicha"></span>
+    </section>
 
+
+    <section class="atalhos">
+
+        <a
+            href="animais.html?tipo=cao"
+            class="atalho"
+        >
+
+            <div class="atalho-icone">
+                🐶
             </div>
 
+            <h3>
+                Cães
+            </h3>
 
-            <div>
+            <p>
+                Veja todos os cães.
+            </p>
 
-                <strong>
-                    Guia / Cercado / Gaiola
-                </strong>
+        </a>
 
-                <br>
 
-                <span id="localFicha"></span>
+        <a
+            href="animais.html?tipo=gato"
+            class="atalho"
+        >
 
+            <div class="atalho-icone">
+                🐱
             </div>
 
+            <h3>
+                Gatos
+            </h3>
 
-            <div>
+            <p>
+                Veja todos os gatos.
+            </p>
 
-                <strong>
-                    Entrevistadoras
-                </strong>
+        </a>
 
-                <br>
 
-                <span id="entreFicha"></span>
+        <a
+            href="animais.html"
+            class="atalho"
+        >
 
+            <div class="atalho-icone">
+                🐾
             </div>
 
-        </div>
+            <h3>
+                Todos
+            </h3>
 
+            <p>
+                Veja todos os animais.
+            </p>
 
-        <h3>
-            História
-        </h3>
+        </a>
 
-
-        <div
-            id="storyFicha"
-            class="story"
-        ></div>
-
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
 <footer>
 
-    Pacotinho de Amor • Feira Petland • 03/09
+    <p>
+        Feira de Adoção • 03/09
+    </p>
 
 </footer>
 
-
-<!-- DADOS -->
-
-<script src="assets/dados.js"></script>
-
-<script src="assets/equipe.js"></script>
-
-
-<script>
-
-const animais =
-    window.ANIMAIS || [];
-
-
-const lista =
-    document.getElementById("lista");
-
-
-const busca =
-    document.getElementById("busca");
-
-
-let filtro = "todos";
-
-
-/* NORMALIZAR TEXTO */
-
-function normalizar(texto){
-
-    return (texto || "")
-        .toString()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g,"")
-        .toLowerCase()
-        .trim();
-
-}
-
-
-/* TRANSFORMAR NOME EM NOME DE FOTO */
-
-function nomeFoto(nome){
-
-    return normalizar(nome)
-        .replace(/[^a-z0-9]+/g,"-")
-        .replace(/^-|-$/g,"")
-        + ".jpg";
-
-}
-
-
-/* MOSTRAR LISTA */
-
-function render(){
-
-    const q =
-        normalizar(
-            busca.value
-        );
-
-
-    const filtrados =
-        animais.filter(a => {
-
-            const localOk =
-                filtro === "todos" ||
-                normalizar(a.local)
-                    .includes(
-                        normalizar(filtro)
-                    );
-
-
-            const texto =
-                normalizar(
-                    a.name +
-                    " " +
-                    a.volunteers.join(" ") +
-                    " " +
-                    a.local
-                );
-
-
-            return (
-                localOk &&
-                texto.includes(q)
-            );
-
-        });
-
-
-    lista.innerHTML = "";
-
-
-    if(!filtrados.length){
-
-        lista.innerHTML = `
-            <div class="empty">
-                Nenhum animal encontrado.
-                <br>
-                Tente outro nome.
-            </div>
-        `;
-
-        return;
-
-    }
-
-
-    filtrados.forEach(a => {
-
-        const el =
-            document.createElement("article");
-
-
-        el.className = "card";
-
-
-        el.innerHTML = `
-
-            <h3>
-                ${a.name}
-            </h3>
-
-            <p>
-                <strong>
-                    Responsável:
-                </strong>
-
-                ${a.volunteers.join(", ")}
-            </p>
-
-            <p>
-                <strong>
-                    Local:
-                </strong>
-
-                ${a.local}
-            </p>
-
-        `;
-
-
-        el.onclick =
-            () => abrirFicha(a);
-
-
-        lista.appendChild(el);
-
-    });
-
-}
-
-
-/* ABRIR FICHA */
-
-function abrirFicha(a){
-
-    document
-        .getElementById("nomeFicha")
-        .textContent = a.name;
-
-
-    document
-        .getElementById("volFicha")
-        .textContent =
-            a.volunteers.join(", ");
-
-
-    document
-        .getElementById("localFicha")
-        .textContent =
-            a.local;
-
-
-    document
-        .getElementById("entreFicha")
-        .textContent =
-            a.interviewers;
-
-
-    document
-        .getElementById("storyFicha")
-        .textContent =
-            a.story;
-
-
-    /*
-       FOTO
-
-       O site procura automaticamente:
-
-       assets/fotos/nome-do-animal.jpg
-
-       Exemplo:
-
-       Belo → assets/fotos/belo.jpg
-       Ana Castela → assets/fotos/ana-castela.jpg
-       Aurora → assets/fotos/aurora.jpg
-    */
-
-    const foto =
-        document.getElementById(
-            "fotoAnimal"
-        );
-
-
-    const placeholder =
-        document.getElementById(
-            "photoPlaceholder"
-        );
-
-
-    foto.src =
-        "assets/fotos/" +
-        nomeFoto(a.name);
-
-
-    foto.alt =
-        "Foto de " + a.name;
-
-
-    foto.style.display =
-        "none";
-
-
-    placeholder.style.display =
-        "block";
-
-
-    foto.onload = () => {
-
-        foto.style.display =
-            "block";
-
-        placeholder.style.display =
-            "none";
-
-    };
-
-
-    foto.onerror = () => {
-
-        foto.style.display =
-            "none";
-
-        placeholder.style.display =
-            "block";
-
-    };
-
-
-    document
-        .getElementById("ficha")
-        .classList.remove("hidden");
-
-
-    document
-        .getElementById("animais")
-        .classList.add("hidden");
-
-
-    document
-        .getElementById("inicio")
-        .classList.add("hidden");
-
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* VOLTAR */
-
-document
-    .getElementById("voltar")
-    .onclick = () => {
-
-        document
-            .getElementById("ficha")
-            .classList.add("hidden");
-
-
-        document
-            .getElementById("animais")
-            .classList.remove("hidden");
-
-
-        document
-            .getElementById("inicio")
-            .classList.remove("hidden");
-
-
-        document
-            .getElementById("animais")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-    };
-
-
-/* PESQUISA */
-
-busca.addEventListener(
-    "input",
-    render
-);
-
-
-/* LIMPAR */
-
-document
-    .getElementById("limpar")
-    .onclick = () => {
-
-        busca.value = "";
-
-        filtro = "todos";
-
-
-        document
-            .querySelectorAll(".tab")
-            .forEach(x =>
-                x.classList.remove("active")
-            );
-
-
-        document
-            .querySelector(
-                '[data-filtro="todos"]'
-            )
-            .classList.add("active");
-
-
-        render();
-
-    };
-
-
-/* FILTROS */
-
-document
-    .querySelectorAll(".tab")
-    .forEach(btn => {
-
-        btn.addEventListener(
-            "click",
-            () => {
-
-                if(
-                    !btn.dataset.filtro
-                ){
-                    return;
-                }
-
-
-                filtro =
-                    btn.dataset.filtro;
-
-
-                document
-                    .querySelectorAll(".tab")
-                    .forEach(x =>
-                        x.classList.remove(
-                            "active"
-                        )
-                    );
-
-
-                btn.classList.add(
-                    "active"
-                );
-
-
-                render();
-
-            }
-        );
-
-    });
-
-
-/* PRIMEIRA RENDERIZAÇÃO */
-
-render();
-
-</script>
-
 </body>
+
 </html>
